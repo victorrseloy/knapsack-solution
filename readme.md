@@ -38,8 +38,8 @@ by comma). E.g.
 4
 
 -
-2,
-8,
+2,7
+8,9
 ```
 
 ## Constraints
