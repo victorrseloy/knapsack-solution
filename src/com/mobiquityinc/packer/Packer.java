@@ -11,13 +11,24 @@ import java.util.stream.Stream;
 
 import com.mobiquityinc.exception.APIException;
 
+/**
+ * Class that solves the packing problem, the packing problem is a well know problem in CS also known as 
+ * the knapsack problem. The optimal solution to it consists in break the problem into easier problem like "what would be
+ * the optimal solution if I had only 1 item to put in my bag?" then extend it to a slightly bigger problem like 
+ * "knowing the optimal solution to 1 item, what would be the ideal solution if I decided to try it with one more possible item?"
+ * This approach make use of dynamic programming techniques to store the previous base case solutions.
+ * @author victor
+ *
+ */
 public class Packer {
 	private static final String LINE_BREAK = "\n";
 	
 	/**
 	 * 
-	 * @param filePath
-	 * @return
+	 * Solves the packing problem from an input file, following the specified pdf format
+	 * 
+	 * @param filePath - path to the file containing the knapsack instances
+	 * @return a string containing the list of items included in the solution
 	 */
 	public static String pack(String filePath) {
 		
