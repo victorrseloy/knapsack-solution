@@ -8,6 +8,11 @@ import com.mobiquityinc.exception.APIException;
 import com.mobiquityinc.packer.Packer;
 import com.mobiquityinc.packer.PackerInstance;
 
+/**
+ * Test cases to cover our pack problem solution
+ * @author victor
+ *
+ */
 public class PackerTests {
 	
 	@Test
@@ -15,6 +20,13 @@ public class PackerTests {
 		String solution = Packer.solvePackerInstance(new PackerInstance("8 : (1,15.3,€34)"));
 		assertEquals("-", solution );
 	}
+	
+	@Test
+	public void noItemsProvided() {
+		String solution = Packer.solvePackerInstance(new PackerInstance("55 : "));
+		assertEquals("-", solution );
+	}
+	
 	
 	@Test
 	public void multipleItemsCouldBeUsedButShallUseTheLighterOne() {
